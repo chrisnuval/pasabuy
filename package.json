@@ -1,15 +1,21 @@
 {
   "name": "Pasabuy",
   "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "https://ionicframework.com/",
+  "author": "CCC",
+  "homepage": "https://pasabuy.io/",
   "scripts": {
-    "start": "ionic serve",
-    "build": "ionic build",
-    "ionic:copy": "ionic cap copy",
-    "ionic:sync": "ionic cap sync",
-    "ionic:live:ios":  "ionic cap run ios -l --external",
-    "build:all": "npm run build && npm run ionic:copy"
+    "start": "npx ionic serve",
+    "e2e": "npx ng e2e --configuration=test",
+    "lint": "npx ng lint",
+    "ng": "npx ng",
+    "test": "npx ng test --code-coverage",
+    "test:dev": "npx ng test --browsers=ChromeHeadlessCI --code-coverage",
+    "test:ci": "npx ng test --no-watch --browsers=ChromeHeadlessCI --code-coverage",
+    "build": "npx ionic build",
+    "ionic:copy": "npx ionic cap copy",
+    "ionic:sync": "npx ionic cap sync",
+    "ionic:live:ios": "npx ionic cap run ios -l --external",
+    "build:all": "npm run lint && npm run build && npm run ionic:copy"
   },
   "private": true,
   "dependencies": {
@@ -31,6 +37,7 @@
     "@capacitor/status-bar": "4.1.1",
     "@ionic/angular": "^6.1.9",
     "@ionic/pwa-elements": "^3.1.1",
+    "ionic": "^5.4.16",
     "ionicons": "^6.0.3",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",

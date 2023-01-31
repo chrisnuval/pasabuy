@@ -4,11 +4,11 @@ import { ActionSheetController } from '@ionic/angular';
 
 
 @Component({
-  selector: 'app-tab2',
-  templateUrl: 'tab2.page.html',
-  styleUrls: ['tab2.page.scss']
+  selector: 'app-gallery',
+  templateUrl: 'gallery.page.html',
+  styleUrls: ['gallery.page.scss']
 })
-export class Tab2Page {
+export class GalleryPage {
 
   constructor(public photoService: PhotoService, public actionSheetController: ActionSheetController) {}
 
