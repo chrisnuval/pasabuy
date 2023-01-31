@@ -32,7 +32,6 @@ export class PhotoService {
 
     const savedImageFile = await this.savePicture(capturedPhoto);
 
-    console.log(this.photos.toString);
     this.photos.unshift(savedImageFile);
 
     Preferences.set({

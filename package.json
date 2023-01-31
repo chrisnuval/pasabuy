@@ -5,11 +5,17 @@
   "homepage": "https://ionicframework.com/",
   "scripts": {
     "start": "ionic serve",
+    "e2e": "ng e2e --configuration=test",
+    "lint": "ng lint",
+    "ng": "ng",
+    "test": "ng test --code-coverage",
+    "test:dev": "ng test --browsers=ChromeHeadlessCI --code-coverage",
+    "test:ci": "ng test --no-watch --browsers=ChromeHeadlessCI --code-coverage",
     "build": "ionic build",
     "ionic:copy": "ionic cap copy",
     "ionic:sync": "ionic cap sync",
-    "ionic:live:ios":  "ionic cap run ios -l --external",
-    "build:all": "npm run build && npm run ionic:copy"
+    "ionic:live:ios": "ionic cap run ios -l --external",
+    "build:all": "npm run lint && npm run build && npm run ionic:copy"
   },
   "private": true,
   "dependencies": {

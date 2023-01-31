@@ -9,7 +9,7 @@ describe('Gallery Page', () => {
   let component: GalleryPage;
   let fixture: ComponentFixture<GalleryPage>;
 
-  beforeEach(async () => {
+  beforeEach(async() => {
     await TestBed.configureTestingModule({
       declarations: [GalleryPage],
       imports: [IonicModule.forRoot(), ExploreContainerComponentModule]
@@ -19,8 +19,9 @@ describe('Gallery Page', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
-
+  
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
 });
